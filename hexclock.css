@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "tradegothic";
+  src: url("tradegothic.ttf");
+}
+@font-face {
+  font-family: "tradegothic";
+  src: url("tradegothic.otf");
+}
+body {
+  background-color: #293759;
+  font-family: tradegothic;
+  height: 100%;
+}
+div {
+  color: white;
+  font-family: "tradegothic", sans-serif;
+  font-size: 2.5em;
+  text-transform: uppercase;
+}
+.aligner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@supports not (-ms-flex: 1) {
+  .aligner {
+    height: auto;
+    min-height: 24em;
+  }
+}
+.aligner-item {
+  min-width: 50%;
+  max-width: 50%;
+  width: 50%;
+}
