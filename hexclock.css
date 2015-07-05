@@ -33,3 +33,6 @@ div {
   max-width: 50%;
   width: 50%;
 }
+.clock {
+  display: block;
+}
