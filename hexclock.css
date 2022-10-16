@@ -10,6 +10,7 @@ body {
   background-color: #293759;
   font-family: tradegothic;
   height: 100%;
+  transition: background-color 1000ms linear;
 }
 div {
   color: white;
