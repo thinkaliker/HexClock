@@ -1,20 +1,42 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <title>HexClock</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@800&display=swap" rel="stylesheet">
-  <script src="hexclock.js"></script>
-  <link href="hexclock.css" type="text/css" rel="stylesheet" />
-</head>
-
-<body class="scaled">
-  <div class="flex-container">
-    <div id="clock" class="scaledtext"></div>
-  </div>
-</body>
+  <head>
+    <title>HexClock</title>
+    <link id="favicon" href="#" rel="shortcut icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@800&display=swap" rel="stylesheet">
+    <script src="hexclock.js"></script>
+    <style>
+      body {
+        background-color: #293759;
+        height: 100vh;
+        width: 100vw;
+        transition: background-color 1000ms linear;
+        overflow: hidden;
+      }
+      .flex-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+      #clock {
+        color: white;
+        font-family: "JetBrains Mono", monospace;
+        font-weight: 800;
+        font-size: 12em;
+        text-transform: uppercase;
+        text-align: center;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div id="clock"></div>
+    </div>
+  </body>
 
 </html>
