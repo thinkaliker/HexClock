@@ -14,9 +14,9 @@ $(document).ready(function() {
     let clockColor = null;
 
     if (mode === "scaled") {
-      const hScaled = mapRange(h, 0, 23, 0, 230).toString(16);
-      const mScaled = mapRange(m, 0, 59, 0, 236).toString(16);
-      const sScaled = mapRange(s, 0, 59, 0, 236).toString(16);
+      const hScaled = mapRange(h, 0, 23, 0, 255).toString(16);
+      const mScaled = mapRange(m, 0, 59, 0, 255).toString(16);
+      const sScaled = mapRange(s, 0, 59, 0, 255).toString(16);
       bgColor = rgbToHexString(hScaled, mScaled, sScaled);
       clockColor = textColorFromBackground(hScaled, mScaled, sScaled);
     } else if (mode === "normal") {
@@ -46,7 +46,7 @@ function rgbToHexString(r, g, b) {
 
 // maps a value from one range to another range
 function mapRange(value, low1, high1, low2, high2) {
-  return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
+  return Math.round(low2 + (high2 - low2) * (value - low1) / (high1 - low1));
 }
 
 // choose a text color based on the provided RGB values
